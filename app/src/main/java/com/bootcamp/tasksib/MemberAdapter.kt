@@ -20,6 +20,9 @@ class MemberAdapter(private val context: Context, private val member: List<Membe
             imgMember.setImageResource(member.imgMember)
             nameMember.text = member.nameMember
             descMember.text = member.descMember
+            itemView.setOnClickListener{
+                listener(member)
+            }
         }
     }
 
